@@ -18,17 +18,17 @@ if (pregunta === "si") {
     console.log(eleccion);
 
 switch (eleccion) {
-    case "Manzanas":
-        alert("manzanas rojas o verdes");
+    case "manzanas":
+        alert("Manzanas rojas o verdes");
     break;
-    case "Peras": 
-        console.log("blanquilla o william");
+    case "peras": 
+        console.log("Blanquilla o william");
     break;
-    case "Ciruelas":
-        console.log("disculpe, no hay stock")
+    case "ciruelas":
+        console.log("Disculpe, no hay stock")
     break;
     default:
-        console.log("no se reconoce el producto")
+        console.log("No se reconoce el producto")
     }
 
 } else {
