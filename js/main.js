@@ -7,18 +7,19 @@ let ciruelas = 0;
 function bienvenida () {
     alert ("¡Bienvenido/a a nuestra página!")
 }
+bienvenida ()
 
 // Elegir productos
-let preguntar= prompt("¿Desea comprar algo?")
+let pregunta= prompt("¿Desea comprar algo?")
     console.log(pregunta);
 
 if (pregunta === "si") {
         let eleccion = prompt ("Por favor seleccione uno");
     console.log(eleccion);
 
-switch (respuesta) {
+switch (eleccion) {
     case "Manzanas":
-        console.log("manzanas rojas o verdes");
+        alert("manzanas rojas o verdes");
     break;
     case "Peras": 
         console.log("blanquilla o william");
@@ -29,13 +30,14 @@ switch (respuesta) {
     default:
         console.log("no se reconoce el producto")
     }
+
 } else {
-    console.log("¡Gracias por visitarnos!");
+        let respuesta = alert ("¡Gracias por visitarnos!");
+    console.log(respuesta);
 }
 
 
-//Ejecución de FUNCIONES
-bienvenida ()
+
 
 
 
