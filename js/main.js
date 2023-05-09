@@ -1,37 +1,42 @@
-// Diversos cajones
-const manzanas = 1;
-const peras = 2;
-const ciruelas = 3;
+// VARIABLES GLOBALES
+let manzanas = 0;
+let peras = 0;
+let ciruelas = 0;
 
+// Bienvenida
+function bienvenida () {
+    alert ("¡Bienvenido/a a nuestra página!")
+}
 
-
-alert ("Elegi tu cajon de frutas");
-let pregunta= prompt("¿Desea comprar algo?")
+// Elegir productos
+let preguntar= prompt("¿Desea comprar algo?")
     console.log(pregunta);
-if (pregunta === "si") {
-        let respuesta = prompt ("Por favor seleccione uno");
-    console.log(respuesta);
-    }
-    switch (seleccion) {
-    case "1":
-        manzanas ();
-        break; 
-    case "2":
-        peras ();
-        break;
-    case "3":
-        ciruelas ();
-        break; 
-    }
 
-function negacion (gracias) {
-    return gracias + "por visitarnos";
-    let negacion = ("gracias")
-    console.log(negacion);
+if (pregunta === "si") {
+        let eleccion = prompt ("Por favor seleccione uno");
+    console.log(eleccion);
+
+switch (respuesta) {
+    case "Manzanas":
+        console.log("manzanas rojas o verdes");
+    break;
+    case "Peras": 
+        console.log("blanquilla o william");
+    break;
+    case "Ciruelas":
+        console.log("disculpe, no hay stock")
+    break;
+    default:
+        console.log("no se reconoce el producto")
+    }
+} else {
+    console.log("¡Gracias por visitarnos!");
 }
 
 
-//AGREGAR UNA FUNCION
+//Ejecución de FUNCIONES
+bienvenida ()
+
 
 
 
