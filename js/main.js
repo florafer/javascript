@@ -60,7 +60,7 @@ const producto1 = new Extra ("frutillas", "1000");
 const producto2 = new Extra ("limones", "700");
 producto1.sumaImpuesto ();
 producto2.sumaImpuesto ();
-producto1.sinStock ();
+producto1.sinStock;
 
 console.log(producto1.nombre);
 console.log(producto1.precio);
@@ -72,20 +72,92 @@ console.log(producto2.precio);
     console.log(respuesta1);
 } 
 
-// IDEA ARRAY
-
-let ensalada1 = {
-    nombre: "Wardolf",
-    ingredientes: "Manzana y apio",
-    origen: "USA",
+// IDEA ARRAY 
+const fruta = { id:1,
+    nombre: "frutilla camarosa",
+    precio: 2000,
+    stock: 5,
 };
 
-let nombre = ensalada1 ["nombre"]; 
-let ingredientes = ensalada1 ["ingredientes"];
-let origen = ensalada1 ["origen"];
+function Fruta (nombre, precio, stock) {
+    this.nombre = nombre;
+    this.precio = precio;
+    this.stock = stock;
+}
 
-let frase = "El nombre de la ensalada es: <b> ${nombre} </b> <br>";
-let frase1 = "Los ingredientes son: <b> ${ingredientes} </b> <br>";
-let frase2 = "Proviene de: <b> ${origen} </b> <br> ";
+const fruta1 = { id:2,
+    nombre: "limon persa",
+    precio: 1500,
+    stock: 8,
+};
 
-document.write(frase, frase1, frase2);
+const fruta2 = { id:3, 
+    nombre: "uva verde",
+    precio: 1750,
+    stock: 10,
+};
+
+libreria.push(fruta)
+
+//recorrido array
+const mercaderia = []
+
+console.log(mercaderia);
+
+let limite = 2;
+do {
+let nombre = prompt("Ingresa nombre de la fruta")
+let precio = prompt("Ingresa el precio de la fruta")
+let stock = prompt("Ingresar la cantidad de cajones de fruta")
+
+mercaderia.push(new Fruta (nombre, precio, stock))
+
+} while (mercaderia.length != limite)
+console.log(mercaderia.length);
+
+// funciones de orden superior
+
+let total = 0;
+
+//abstraccion
+function sumaRango (inicio, fin) {}
+let rango = sumaRango(1,10)
+
+//find
+let encontrado = mercaderia.find((el)=>{
+    return el.nombre.includes("frutillas")
+})
+
+console.log(encontrado);
+
+//filter 1
+let accesibles = mercaderia.filter(el=>{
+    return el.precio <= 1500
+})
+
+console.log(accesibles);
+
+//filter 2
+let caros = mercaderia.filter(el=>{
+    return el.precio >= 1500
+})
+
+//some que devuelve valores booleanos, true or false, en este caso true
+let existe = mercaderia.some(el=>{
+    return el.nombre == "limones"
+})
+
+console.log(existe);
+
+// precios con descuento del 15%
+var porcentaje = 15; 
+const precioDescuento = mercaderia.map(nuevoPrecio=>{
+    return {
+        id: nuevoPrecio.id,
+        nombre: nuevoPrecio.nombre,
+        precio: ((nuevoPrecio * porcentaje)/100).toFixed(2),
+        stock: nuevoPrecio.stock,
+    }
+})
+
+console.log(precioDescuento);
