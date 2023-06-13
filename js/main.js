@@ -117,27 +117,14 @@ console.log(mercaderia.length);
 
 // funciones de orden superior
 
-let total = 0;
-
-//abstraccion
-function sumaRango (inicio, fin) {}
-let rango = sumaRango(1,10)
-
-//find
-let encontrado = mercaderia.find((el)=>{
-    return el.nombre.includes("frutillas")
-})
-
-console.log(encontrado);
-
-//filter 1
+//filter 1 ACCESIBLES
 let accesibles = mercaderia.filter(el=>{
     return el.precio <= 1500
 })
 
 console.log(accesibles);
 
-//filter 2
+//filter 2 CAROS
 let caros = mercaderia.filter(el=>{
     return el.precio >= 1500
 })
