@@ -95,20 +95,19 @@ const fruta2 = { id:3,
     nombre: "uva verde",
     precio: 1750,
     stock: 10,
-};
-
-libreria.push(fruta)
+}; 
 
 //recorrido array
 const mercaderia = []
 
 console.log(mercaderia);
 
-let limite = 2;
+let limite = 1;
 do {
 let nombre = prompt("Ingresa nombre de la fruta")
-let precio = prompt("Ingresa el precio de la fruta")
+let precio = parseInt(prompt("Ingresa el precio de la fruta"));
 let stock = prompt("Ingresar la cantidad de cajones de fruta")
+// PREGUNTAR let calculo =prompt("su total sería de" + (fruta1 precio))
 
 mercaderia.push(new Fruta (nombre, precio, stock))
 
@@ -129,7 +128,7 @@ let caros = mercaderia.filter(el=>{
     return el.precio >= 1500
 })
 
-//some que devuelve valores booleanos, true or false, en este caso true
+// devuelve valores booleanos, true or false, en este caso true
 let existe = mercaderia.some(el=>{
     return el.nombre == "limones"
 })
@@ -142,9 +141,18 @@ const precioDescuento = mercaderia.map(nuevoPrecio=>{
     return {
         id: nuevoPrecio.id,
         nombre: nuevoPrecio.nombre,
-        precio: ((nuevoPrecio * porcentaje)/100).toFixed(2),
+        precio: ((nuevoPrecio.precio * porcentaje)/100).toFixed(2),
         stock: nuevoPrecio.stock,
     }
 })
 
 console.log(precioDescuento);
+
+// INTERPOLACION Para Frutillas, Limones y Uvas
+let concatenacion = `Producto: ${fruta.nombre}, precio: $ ${fruta.precio}`;
+let concatenacion1 = `Producto: ${fruta1.nombre}, precio: $ ${fruta1.precio}`;
+let concatenacion2 = `Producto: ${fruta2.nombre}, precio: $ ${fruta2.precio}`;
+
+console.log(concatenacion);
+console.log(concatenacion1);
+console.log(concatenacion2);
