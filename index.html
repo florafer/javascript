@@ -25,18 +25,26 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link disabled" aria-current="page" href="#"> Disabled </a>
+                    <a id="carrito" class="nav-link carrito" href="#"> 🛒 </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
-                </ul>
+                </ul>s
             </div>
             </div>
         </nav>
     </header>
 
     <main>
+        <label for="ingreso">General</label>
+        <input type="text" name="ingreso" id="ingreso"/>
+        <p></p>
+
+        <button id="btnSearch" class="btn"> Buscar producto </button>
+        <div id="contenedor"> </div>
+        <ul Id="lista"> </ul>
+
         <h2> Breve descripción </h2>
         <section class="letra">
             <p>
@@ -46,6 +54,9 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem debitis impedit reprehenderit, aliquid ullam qui, voluptatem excepturi vero voluptas iste nemo veniam, distinctio consequatur? Earum perferendis velit quisquam assumenda asperiores.
             </p>
         </section>
+
+        <input type="text" id="datoSeleccionado">
+        <button id="btn"> Seleccione los productos</button>
 
     <section class="grid-container">
         <img src="./imagenes/manzana.jpg" alt="cajón de manzanas">

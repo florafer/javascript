@@ -1,39 +1,37 @@
-// VARIABLES GLOBALES
-let manzanas = 0;
-let peras = 0;
-let ciruelas = 0;
 
-// Bienvenida
+const btnSearch = document.querySelector("#btnSearch"),
+        inputIngreso = document.querySelector("inputIngreso");
+
+inputIngreso.addEventListener("click", ()=> {
+    console.log(inputNombre);
+});
+
+// Bienvenida  
 function bienvenida () {
-    alert ("¡Bienvenido/a a nuestra página!")
+    console.log("¡Bienvenido/a a nuestra página!");
 }
 bienvenida ()
 
 // Elegir productos
-let pregunta= prompt("¿Desea comprar algo?");
-    console.log(pregunta);
 
-if (pregunta === "si") {
-        let eleccion = prompt ("Por favor seleccione uno  \n 1. manzanas \n 2. peras \n 3. ciruelas");
+const inputDatos = document.getElementById("datoSeleccionado");
+const btn= document.getElementById("btn");
 
-switch (eleccion) {
-    case "1":
-        alert("Manzanas rojas o verdes");
-    break;
-    case "2": 
-        alert("Blanquilla o william");
-    break;
-    case "3":
-        alert("Disculpe, no hay stock")
-    break;
-    default:
-        alert("No se reconoce el producto")
-        }
-
-} else {
-        let respuesta = alert ("¡Gracias por visitarnos!");
-    console.log(respuesta);
-}
+btn.addEventListener("click", () => {
+    switch (inputDatos.value) {
+        case "1":
+            console.log("Manzanas rojas o verdes");
+            break;
+        case "2": 
+            console.log("Blanquilla o william");
+            break;
+        case "3":
+            console.log("Disculpe, no hay stock")
+            break;
+        default:
+            console.log("No se reconoce el producto")
+            }
+})
 
 // IDEA PARA OBJETOS Y FUNCIONES
 
