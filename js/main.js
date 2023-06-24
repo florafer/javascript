@@ -3,8 +3,16 @@ const btnSearch = document.querySelector("#btnSearch"),
         inputIngreso = document.querySelector("inputIngreso");
 
 inputIngreso.addEventListener("click", ()=> {
-    console.log(inputNombre);
+    console.log(inputIngreso);
 });
+
+// Uso de localStorage
+localStorage.setItem('tuNombre');
+
+const nombre = localStorage.getItem('nombre');
+console.log(nombre); 
+
+localStorage.removeItem('nombre');
 
 // Bienvenida  
 function bienvenida () {
@@ -102,26 +110,33 @@ console.log(mercaderia);
 
 let limite = 1;
 do {
-let nombre = prompt("Ingresa nombre de la fruta")
-let precio = parseInt(prompt("Ingresa el precio de la fruta"));
-let stock = prompt("Ingresar la cantidad de cajones de fruta")
-// PREGUNTAR let calculo =prompt("su total sería de" + (fruta1 precio))
 
-mercaderia.push(new Fruta (nombre, precio, stock))
+function Evento(nombre, cantidad) {
+    this.nombre = nombre;
+    this.cantidad = cantidad
+}
+let evento = new evento ("Ingrese nombre de la fruta", "Elija entre las opciones");
+let evento1 = new evento ("Ingrese la cantidad de cajones de fruta");
+
+evento.push(evento);
+evento.push(evento1);
+
+console.log(evento[0]);
+console.log(evento1);
 
 } while (mercaderia.length != limite)
 console.log(mercaderia.length);
 
 // funciones de orden superior
 
-//filter 1 ACCESIBLES
+//filter 1 - ACCESIBLES
 let accesibles = mercaderia.filter(el=>{
     return el.precio <= 1500
 })
 
 console.log(accesibles);
 
-//filter 2 CAROS
+//filter 2 - CAROS
 let caros = mercaderia.filter(el=>{
     return el.precio >= 1500
 })
